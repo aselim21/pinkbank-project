@@ -1,0 +1,92 @@
+/* Colors
+----------------------------------------------------------------------------- */
+$dark:    #666;
+$darker:  #333;
+$darkest:  #000;
+$light:   #a5a5a5;
+$lighter: #fff;
+$purple-dark: #330048;
+$accent:  #fc0;
+$error:   #c00;
+$theme-color : linear-gradient(162.3deg, #5C00A4 8.77%, rgba(0, 146, 192, 0.4) 20.02%, #3D006C 34.52%, #0B0050 58.46%, #3C0046 75.5%);
+$card-front-color: linear-gradient(0deg, rgba(37, 59, 255, 0.2), rgba(37, 59, 255, 0.2)), linear-gradient(301.78deg, rgba(19, 16, 138, 0.376) 20.87%, rgba(197, 16, 168, 0.4) 34.74%, rgba(255, 39, 220, 0.4) 45.24%, rgba(255, 60, 224, 0.4) 55.55%, rgba(45, 43, 153, 0.376) 67.47%), radial-gradient(18.8% 38.68% at 85.62% 8.83%, rgba(247, 222, 0, 0.8) 26.56%, rgba(75, 38, 137, 0.8) 83.33%, rgba(24, 0, 64, 0.648) 100%);
+$card-back-color: linear-gradient(269.72deg, rgba(217, 217, 217, 0.49) 0.07%, #FFFFFF 32.26%);
+
+/* Viewports
+----------------------------------------------------------------------------- */
+$vp-medium: 720px;
+$vp-large: 1024px;
+$vp-xlarge: 1400px;
+
+/* Größen und Abstände
+----------------------------------------------------------------------------- */
+
+$bfs: 1rem;
+$multiply: 0.008;
+
+/* Entlang der Renard10 Reihe
+  100, 125, 160, 200, 250, 315 */
+
+$xs: $bfs * $multiply * 100;
+$s: $bfs * $multiply * 125;
+$m: $bfs * $multiply * 160;
+$l: $bfs * $multiply * 200;
+$xl: $bfs * $multiply * 250;
+$xxl: $bfs * $multiply * 315;
+
+/* Schriftarten
+----------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: Roboto-light;
+  font-style: normal;
+  font-weight: 100;
+  src: local("Roboto-light"), url("/assets/fonts/Roboto/Roboto-Light.ttf");
+}
+
+@font-face {
+  font-family: Roboto-regular;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto-regular"), url("/assets/fonts/Roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: Roboto-bold;
+  font-style: normal;
+  font-weight: 700;
+  src: local("Roboto-bold"), url("/assets/fonts/Roboto/Roboto-Bold.ttf");
+}
+
+$font-sans-serif: "Roboto-light";
+$font-sans-serif-bold: "Roboto-bold";
+$font-graduate: "Graduate";
+
+/* Line Height
+----------------------------------------------------------------------------- */
+$lh-normal: 130%;
+
+/* Font Weight
+----------------------------------------------------------------------------- */
+$fw-light: 100;
+$fw-medium: 400;
+$fw-bold: 700;
+
+/* Misc
+----------------------------------------------------------------------------- */
+
+$border-radius: $xs;
+$border-width-s: 1px;
+$min-card-width: 20rem;
+$tr-fast: 0.3s; // Transition
+
+/* Mappings
+----------------------------------------------------------------------------- */
+:root {
+  --bg-color: #{$darker};
+  --text-color: #{$lighter};
+  --text-color-minor: #{$light};
+  --interaction-color: #{$accent};
+  --bg-color-card: #{$darkest};
+  --bg-color-form: #{$dark};
+}

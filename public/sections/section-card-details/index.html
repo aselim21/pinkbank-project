@@ -1,0 +1,82 @@
+
+  <!doctype html>
+  <html lang="de">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <title>PinkBank | Details</title>
+      <link rel="stylesheet" href="/assets/styles/compiled_styles/main.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <main class="flex-container">
+          <section class="page-design">
+            
+<div id="side-background"></div>
+
+<div class="card" id="card-back">
+    <div id="card-black-line"></div>
+    <div id="card-code-line"></div>
+    <p id="card-code" class="noselect">000</p>
+    <div id="card-info-line-1"></div>
+    <div id="card-info-line-2"></div>
+    <div id="card-info-line-3"></div>
+</div>
+
+<div class="card" id="card-front">
+    <div id="card-big-circle"></div>
+    <div id="card-small-circle"></div>
+    <p id="card-number" class="noselect">0000 0000 0000 0000</p>
+    <p id="card-holder-name" class="noselect">Jane Appleseed</p>
+    <div id="card-validity">
+        <p id="card-validity-m" class="noselect">00</p>
+        <p class="noselect">/</p>
+        <p id="card-validity-y" class="noselect">00</p>
+    </div>
+</div>
+
+  
+          </section>
+          <section class="page-content">
+            
+<form id="card-details-form" onsubmit="return validateForm()" action="/sections/section-done">
+    <div class="form-multiple-rows">
+        <label for="c-name">Cardholder Name</label>
+        <input type="text" id="c-name" name="c-name" placeholder="Jane Appleseed" mandatory>
+        <label for="c-number">Card Number</label>
+        <input type="text" id="c-number" name="c-number" placeholder="1234 5678 9123 0000" maxlength="19"  mandatory onlyNumbers>
+    </div>
+    <div class="form-flex-box">
+        <div class="form-flex-el">
+            <label for="c-exp-date">Exp. Date (MM/YY)</label>
+            <div class="form-grid-2x2" >
+                <div>
+                    <input type="text" id="c-exp-m" name="c-exp-date" placeholder="MM" maxlength="2" mandatory onlyNumbers>
+                </div>
+                <div>
+                    <input type="text" id="c-exp-y" name="c-exp-date" placeholder="YY" maxlength="2" mandatory onlyNumbers>
+                </div>
+            </div>
+        </div>
+        <div class="form-flex-el">
+            <label for="c-cvc">CVC</label>
+            <input type="text" id="c-cvc" name="c-cvc" placeholder="123" maxlength="3" mandatory onlyNumbers>
+        </div>
+    </div>
+    <input type="submit" value="Confirm" class="button-large">
+</form>
+<script src="/assets/scripts/card-details.js"></script>
+
+            
+<footer>
+    <p>&copy; 2022 Achelia Selim</p>
+</footer>
+
+          </section>
+        </main>
+    <script src="/assets/scripts/main.js"></script>
+  </body>
+  </html>
+  

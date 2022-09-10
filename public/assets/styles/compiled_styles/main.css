@@ -1,0 +1,458 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Colors
+----------------------------------------------------------------------------- */
+/* Viewports
+----------------------------------------------------------------------------- */
+/* Größen und Abstände
+----------------------------------------------------------------------------- */
+/* Entlang der Renard10 Reihe
+  100, 125, 160, 200, 250, 315 */
+/* Schriftarten
+----------------------------------------------------------------------------- */
+@font-face {
+  font-family: Roboto-light;
+  font-style: normal;
+  font-weight: 100;
+  src: local("Roboto-light"), url("/assets/fonts/Roboto/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: Roboto-regular;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto-regular"), url("/assets/fonts/Roboto/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: Roboto-bold;
+  font-style: normal;
+  font-weight: 700;
+  src: local("Roboto-bold"), url("/assets/fonts/Roboto/Roboto-Bold.ttf");
+}
+/* Line Height
+----------------------------------------------------------------------------- */
+/* Font Weight
+----------------------------------------------------------------------------- */
+/* Misc
+----------------------------------------------------------------------------- */
+/* Mappings
+----------------------------------------------------------------------------- */
+:root {
+  --bg-color: #333;
+  --text-color: #fff;
+  --text-color-minor: #a5a5a5;
+  --interaction-color: #fc0;
+  --bg-color-card: #000;
+  --bg-color-form: #666;
+}
+
+* {
+  font-family: "Roboto-light";
+}
+
+/* Side Background
+----------------------------------------------------------------------------- */
+#side-background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  min-height: 100%;
+  width: 30%;
+  background: linear-gradient(162.3deg, #5C00A4 8.77%, rgba(0, 146, 192, 0.4) 20.02%, #3D006C 34.52%, #0B0050 58.46%, #3C0046 75.5%);
+  background-attachment: scroll;
+  opacity: 0.9;
+}
+
+/* Page
+----------------------------------------------------------------------------- */
+.flex-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+.page-design {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: repeat(10, 7%);
+  grid-template-rows: repeat(10, 10%);
+}
+
+.page-content {
+  width: 40%;
+  align-content: center;
+}
+
+/* Cards
+----------------------------------------------------------------------------- */
+.card {
+  position: relative;
+  width: 323.53px;
+  height: 204.02px;
+  border: none;
+  border-radius: 9px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Graduate";
+  color: white;
+}
+.card p:hover {
+  cursor: default;
+}
+
+#card-front {
+  grid-column-start: 2;
+  grid-row-start: 3;
+  background: linear-gradient(0deg, rgba(37, 59, 255, 0.2), rgba(37, 59, 255, 0.2)), linear-gradient(301.78deg, rgba(19, 16, 138, 0.376) 20.87%, rgba(197, 16, 168, 0.4) 34.74%, rgba(255, 39, 220, 0.4) 45.24%, rgba(255, 60, 224, 0.4) 55.55%, rgba(45, 43, 153, 0.376) 67.47%), radial-gradient(18.8% 38.68% at 85.62% 8.83%, rgba(247, 222, 0, 0.8) 26.56%, rgba(75, 38, 137, 0.8) 83.33%, rgba(24, 0, 64, 0.648) 100%);
+}
+#card-front #card-big-circle {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  left: 20px;
+  top: 20px;
+}
+#card-front #card-small-circle {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 1px solid white;
+  border-radius: 50%;
+  left: 90px;
+  top: 30px;
+}
+#card-front #card-number {
+  position: absolute;
+  font-size: 1.5rem;
+  left: 20px;
+  bottom: 70px;
+}
+#card-front #card-holder-name {
+  position: absolute;
+  font-size: 1rem;
+  left: 20px;
+  bottom: 25px;
+  max-width: 75%;
+}
+#card-front #card-validity {
+  position: absolute;
+  font-size: 1rem;
+  right: 20px;
+  bottom: 25px;
+  display: inline-flex;
+}
+
+#card-back {
+  background: linear-gradient(269.72deg, rgba(217, 217, 217, 0.49) 0.07%, #FFFFFF 32.26%);
+  grid-column-start: 3;
+  grid-row-start: 7;
+}
+#card-back #card-black-line {
+  position: absolute;
+  width: 323.53px;
+  height: 3rem;
+  background-color: #333;
+  top: 1.5rem;
+}
+#card-back #card-code-line {
+  position: absolute;
+  width: 282px;
+  height: 1.8rem;
+  background-color: #a5a5a5;
+  border-radius: 5px;
+  top: 6rem;
+  left: 20px;
+}
+#card-back #card-code {
+  position: absolute;
+  font-size: 1rem;
+  top: 6.4rem;
+  right: 30px;
+}
+#card-back div[id*=card-info-line] {
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 200px;
+  left: 65px;
+  background-color: #a5a5a5;
+  border-radius: 5px;
+}
+#card-back #card-info-line-1 {
+  top: 9rem;
+}
+#card-back #card-info-line-2 {
+  top: 10rem;
+}
+#card-back #card-info-line-3 {
+  top: 11rem;
+}
+
+/* Text settings
+----------------------------------------------------------------------------- */
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+   supported by Chrome, Edge, Opera and Firefox */
+}
+
+h2 {
+  font-family: "Graduate";
+  font-size: 3rem;
+  margin: 1rem 1rem 2rem 1rem;
+  text-align: center;
+}
+
+.comment-of-header {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #a5a5a5;
+  text-align: center;
+  margin: 1rem 1rem 2rem 1rem;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+
+/* Form
+----------------------------------------------------------------------------- */
+#card-details-form .form-flex-box {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+#card-details-form .form-multiple-rows input {
+  width: 100%;
+}
+#card-details-form .form-flex-el #c-exp-m, #card-details-form .form-flex-el #c-exp-y {
+  width: 60%;
+}
+#card-details-form .form-flex-el #c-cvc {
+  width: 100%;
+}
+#card-details-form .form-grid-2x2 {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: repeat(2, 50%);
+}
+#card-details-form .form-grid-2x2 div {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+#card-details-form .form-grid-2x2 div + div {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+label {
+  display: block;
+  font-family: "Graduate";
+  color: #330048;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+input[type=text] {
+  border: solid 1px #a5a5a5;
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+
+input[type=text][mandatory][warning] {
+  border: solid 1px #c00;
+}
+
+/* Buttons
+----------------------------------------------------------------------------- */
+.button-large {
+  background-color: #330048;
+  color: white;
+  border-radius: 5px;
+  width: 100%;
+  padding: 0.5rem 0;
+  margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  /* For tablets: */
+  .flex-container {
+    flex-direction: column;
+  }
+  #side-background {
+    min-height: 0;
+    width: 100%;
+    height: 30%;
+  }
+  .page-design {
+    grid-template-columns: repeat(5, 10%);
+    grid-template-rows: repeat(5, 10%);
+    min-height: 0;
+  }
+  #card-front {
+    grid-column-start: 3;
+    grid-row-start: 3;
+  }
+  #card-back {
+    grid-column-start: 4;
+    grid-row-start: 2;
+  }
+}
+.input-error-msg {
+  font-size: 0.8rem;
+  color: #c00;
+}
+
+/* Footer
+----------------------------------------------------------------------------- */
+footer {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/*# sourceMappingURL=main.css.map */
