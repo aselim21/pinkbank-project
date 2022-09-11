@@ -154,13 +154,13 @@ table {
   font-family: Roboto-regular;
   font-style: normal;
   font-weight: 400;
-  src: local("Roboto-regular"), url("../../assets/fonts/Roboto/Roboto-Regular.ttf");
+  src: local("Roboto-regular"), url("./assets/fonts/Roboto/Roboto-Regular.ttf");
 }
 @font-face {
   font-family: Roboto-bold;
   font-style: normal;
   font-weight: 700;
-  src: local("Roboto-bold"), url("../../assets/fonts/Roboto/Roboto-Bold.ttf");
+  src: local("Roboto-bold"), url("./assets/fonts/Roboto/Roboto-Bold.ttf");
 }
 /* Line Height
 ----------------------------------------------------------------------------- */

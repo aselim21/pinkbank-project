@@ -29,7 +29,6 @@ exports.render = function (pageData) {
             ${footer.html}
           </section>
         </main>
-    <script src="../../assets/scripts/main.js"></script>
   </body>
   </html>
   `;
