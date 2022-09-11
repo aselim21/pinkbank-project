@@ -26,7 +26,7 @@ module.exports = `
     </div>
     <input type="submit" value="Confirm" class="button-large">
 </form>
-<script src="/assets/scripts/card-details.js"></script>
+<script src="./assets/scripts/card-details.js"></script>
 `;
 
 
