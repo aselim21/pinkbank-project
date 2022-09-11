@@ -1,6 +1,6 @@
 
 module.exports = `
-<form id="card-details-form" onsubmit="return validateForm()" action="./sections/section-done">
+<form id="card-details-form" onsubmit="return validateForm()" action="../../sections/section-done">
     <div class="form-multiple-rows">
         <label for="c-name">Cardholder Name</label>
         <input type="text" id="c-name" name="c-name" placeholder="Jane Appleseed" mandatory>
